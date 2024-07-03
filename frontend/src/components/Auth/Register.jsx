@@ -8,7 +8,6 @@ import { Link, Navigate } from "react-router-dom";
 import axios from "axios";
 import toast from "react-hot-toast";
 import { Context } from "../../main";
-import {image} from "../../../public/JobZee-logos__white.png"
 
 const Register = () => {
   const [email, setEmail] = useState("");
