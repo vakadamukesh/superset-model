@@ -20,7 +20,7 @@ const MyJobs = () => {
           "http://localhost:4000/api/v1/job/getmyjobs",
           { withCredentials: true }
         );
-        setMyJobs(data.myjobs);
+        setMyJobs(data.myJobs);
       } catch (error) {
         toast.error(error.response.data.message);
         setMyJobs([]);
@@ -88,7 +88,7 @@ const MyJobs = () => {
       <div className="myJobs page">
         <div className="container">
           <h1>Your Posted Jobs</h1>
-          { myJobs && myJobs.length > 0 ? (
+          {myJobs.length > 0 ? (
             <>
               <div className="banner">
                 {myJobs.map((element) => (

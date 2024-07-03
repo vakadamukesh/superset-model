@@ -5,19 +5,19 @@ const HeroSection = () => {
   const details = [
     {
       id: 1,
-      title: " 10000",
+      title: "1,23,441",
       subTitle: "Live Job",
       icon: <FaSuitcase />,
     },
     {
       id: 2,
-      title: "950",
+      title: "91220",
       subTitle: "Companies",
       icon: <FaBuilding />,
     },
     {
       id: 3,
-      title: "2,50,000",
+      title: "2,34,200",
       subTitle: "Job Seekers",
       icon: <FaUsers />,
     },
@@ -36,7 +36,11 @@ const HeroSection = () => {
             <h1>Find a job that suits</h1>
             <h1>your interests and skills</h1>
             <p>
-              Don't settle for existing just okay. Let a spark ignite your core, a burning desire for something that truly excites you. It's your passion that fuels your purpose, guiding you towards a life filled with meaning and fulfillment. So, embrace what sets your soul on fire.<h4>all the best <i>vmk</i></h4>
+              Ignite your heart's true desire,
+              Let passion be your guiding fire.
+              For what excites your soul within,
+              Holds the power to truly win.
+              Chase dreams that spark a vibrant grin.<h4><i>vmk</i></h4>
             </p>
           </div>
           <div className="image">

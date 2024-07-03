@@ -8,18 +8,18 @@ const Footer = () => {
   const { isAuthorized } = useContext(Context);
   return (
     <footer className={isAuthorized ? "footerShow" : "footerHide"}>
-      <div>&copy; <H3>All Rights Reserved By MUKESH KUMAR VAKADA</H3></div>
+      <div>&copy; All Rights Reserved By CodeWithZeeshu.</div>
       <div>
-        <Link to={"https://m.facebook.com/facebook/"} target="_blank">
+        <Link to={"https://www.facebook.com/share/d3cJP6nSkhzvArS9/?mibextid=qi2Omg"} target="_blank">
           <FaFacebookF />
         </Link>
-        <Link to={"https://youtube.com/@mukeshkumarvakada?si=a9izkbk7oLpigsvC"} target="_blank">
+        <Link to={"UC8dJW1RBS82MJc9YEXHBDFg"} target="_blank">
           <FaYoutube />
         </Link>
-        <Link to={"https://www.linkedin.com/in/mukesh-kumar-b56272247/"} target="_blank">
+        <Link to={"www.linkedin.com/in/mukesh-kumar-b56272247"} target="_blank">
           <FaLinkedin />
         </Link>
-        <Link to={"https://www.instagram.com/"} target="_blank">
+        <Link to={"https://www.instagram.com/love.from.14?utm_source=qr&igsh=M2lmZHEzbG82emJp"} target="_blank">
           <RiInstagramFill />
         </Link>
       </div>
