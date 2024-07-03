@@ -53,7 +53,7 @@ const Register = () => {
       <section className="authPage">
         <div className="container">
           <div className="header">
-            <img src="image" alt="logo" />
+            <img src="/JobZeelogo.png" alt="logo" />
             <h3>Create a new account</h3>
           </div>
           <form>
@@ -109,7 +109,7 @@ const Register = () => {
               <div>
                 <input
                   type="password"
-                  placeholder="PLEASE REMEMBER YOUR PASWORD"
+                  placeholder="Your Password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                 />

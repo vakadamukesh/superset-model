@@ -1,7 +1,11 @@
-import React, { createContext } from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-export const Context=createContext({isAuthorised:false});
+import React, { createContext, useState } from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App.jsx";
+
+export const Context = createContext({
+  isAuthorized: false,
+});
+
 const AppWrapper = () => {
   const [isAuthorized, setIsAuthorized] = useState(false);
   const [user, setUser] = useState({});
@@ -20,8 +24,8 @@ const AppWrapper = () => {
   );
 };
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <AppWrapper />
-  </React.StrictMode>,
-)
+  </React.StrictMode>
+);
