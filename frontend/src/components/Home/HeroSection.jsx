@@ -40,7 +40,7 @@ const HeroSection = () => {
               Let passion be your guiding fire.
               For what excites your soul within,
               Holds the power to truly win.
-              Chase dreams that spark a vibrant grin.<h4><i>vmk</i></h4>
+              Chase dreams that spark a vibrant grin.<h4><i>ATB</i></h4>
             </p>
           </div>
           <div className="image">
