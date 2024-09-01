@@ -90,7 +90,7 @@ const PostJob = () => {
                 onChange={(e) => setCategory(e.target.value)}
               >
                 <option value="">Select Category</option>
-                <option value="Graphics & Design">Graphics & Design</option>
+                <option value="Royal MEch">Royal Mech</option>
                 <option value="Mobile App Development">
                   Mobile App Development
                 </option>
