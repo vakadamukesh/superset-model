@@ -1,1 +1,1 @@
-export const apiUrl = "http://localhost:4000";
+export const apiUrl = "https://superset-model-1.onrender.com";
