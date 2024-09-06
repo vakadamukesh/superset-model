@@ -14,7 +14,7 @@ config({ path: "./config/config.env" });
 
 app.use(
   cors({
-    origin: [process.env.FRONTEND_URL],
+    origin: [process.env.FRONTEND_URL,`https://superset-model-mukesh.vercel.app`],
     method: ["GET", "POST", "DELETE", "PUT"],
     credentials: true,
   })
