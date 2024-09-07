@@ -47,7 +47,7 @@ const Login = () => {
     <>
       <section className="authPage">
         <Container fluid className="d-flex justify-content-center align-items-center min-vh-100 bg-light">
-          <Row className="auth-box shadow-lg rounded p-5 bg-white">
+          <Row className="auth-box rounded p-5 bg-white">
             <Col md={6} className="d-flex flex-column justify-content-center align-items-center">
               <img src="/JobZeelogo.png" alt="logo" className="mb-4" style={{ width: '150px' }} />
               <h3 className="mb-4 text-center">Login to your account</h3>
