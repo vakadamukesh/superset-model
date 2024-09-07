@@ -150,11 +150,33 @@ p {
   font-size: 1.2rem;
   border-radius: 7px;
 }
+.new-btn {
+  padding: 12px;
+  text-align: center;
+  border: none;
+  margin-top: 10px;
+  font-weight: 700;
+  color: #fff;
+  background: #2d5649;
+  font-size: 1.2rem;
+  border-radius: 7px;
+}
 .authPage .container form a {
   padding: 12px;
   text-align: center;
   border: 1px solid #2d5649;
-  margin-top: 25px;
+  margin-top: 10px;
+  font-weight: 700;
+  color: #2d5649;
+  font-size: 1.2rem;
+  text-decoration: none;
+  border-radius: 7px;
+}
+.new-btn2{
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #2d5649;
+  margin-top: 10px;
   font-weight: 700;
   color: #2d5649;
   font-size: 1.2rem;

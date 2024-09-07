@@ -1,15 +1,21 @@
+
+
+
 import React, { useContext, useState } from "react";
-import { FaRegUser } from "react-icons/fa";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { RiLock2Fill } from "react-icons/ri";
+import { Link, Navigate } from "react-router-dom";
+
 import { FaPencilAlt } from "react-icons/fa";
 import { FaPhoneFlip } from "react-icons/fa6";
-import { Link, Navigate } from "react-router-dom";
+import { FaRegUser } from "react-icons/fa";
 import axios from "axios";
 import toast from "react-hot-toast";
 import { Context } from "../../main";
 import { apiUrl } from "../../apiConfig";
-const Register = () => {
+import { Container, Row, Col, Button, Form } from "react-bootstrap";
+
+const Register= () => {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
@@ -43,88 +49,93 @@ const Register = () => {
     }
   };
 
-  if(isAuthorized){
-    return <Navigate to={'/'}/>
-  }
 
+  if (isAuthorized) {
+    return <Navigate to="/" />;
+  }
 
   return (
     <>
       <section className="authPage">
-        <div className="container">
-          <div className="header">
-            <img src="/JobZeelogo.png" alt="logo" />
-            <h3>Create a new account</h3>
-          </div>
-          <form>
-            <div className="inputTag">
-              <label>Register As</label>
-              <div>
-                <select value={role} onChange={(e) => setRole(e.target.value)}>
-                  <option value="">Select Role</option>
-                  <option value="Employer">Employer</option>
-                  <option value="Job Seeker">Job Seeker</option>
-                </select>
-                <FaRegUser />
-              </div>
-            </div>
-            <div className="inputTag">
-              <label>Name</label>
-              <div>
-                <input
-                  type="text"
-                  placeholder="MUKESH KUMAR VAKADA"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                />
-                <FaPencilAlt />
-              </div>
-            </div>
-            <div className="inputTag">
-              <label>Email Address</label>
-              <div>
-                <input
-                  type="email"
-                  placeholder="mukeshkumarvakada9@gmail.com"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                />
-                <MdOutlineMailOutline />
-              </div>
-            </div>
-            <div className="inputTag">
-              <label>Phone Number</label>
-              <div>
-                <input
-                  type="number"
+        <Container fluid className="d-flex justify-content-center align-items-center min-vh-100 bg-light">
+          <Row className="auth-box shadow-lg rounded p-5 bg-white">
+            <Col md={6} className="d-flex flex-column justify-content-center align-items-center">
+              <img src="/JobZeelogo.png" alt="logo" className="mb-4" style={{ width: '150px' }} />
+              <h3 className="mb-4 text-center">Create your account</h3>
+              <Form onSubmit={handleRegister} className="w-100">
+                <Form.Group className="mb-3" controlId="formRole">
+                  <Form.Label>Register As</Form.Label>
+                  <div className="input-group">
+                    <Form.Select value={role} onChange={(e) => setRole(e.target.value)} required>
+                      <option value="">Select Role</option>
+                      <option value="Employer">Employer</option>
+                      <option value="Job Seeker">Job Seeker</option>
+                    </Form.Select>
+                    <span className="input-group-text"><FaRegUser /></span>
+                  </div>
+                </Form.Group>
+                <Form.Group className="mb-3" >
+                  <Form.Label>Name</Form.Label>
+                  <div className="input-group">
+                    <Form.Control
+                      type="text"
+                      placeholder="MUKESH KUMAR VAKADA"
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
+                    />
+                    <span className="input-group-text"> <FaPencilAlt /></span>
+                  </div>
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="formEmail">
+                  <Form.Label>Email Address</Form.Label>
+                  <div className="input-group">
+                    <Form.Control
+                      type="email"
+                      placeholder="mukeshkumarvakada9@gmail.com"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      required
+                    />
+                    <span className="input-group-text"><MdOutlineMailOutline /></span>
+                  </div>
+                </Form.Group>
+                 <Form.Group className="mb-3" controlId="formPhone">
+                  <Form.Label>Phone Number</Form.Label>
+                  <div className="input-group">
+                    <Form.Control
+                     type="number"
                   placeholder="7842857268"
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
-                />
-                <FaPhoneFlip />
-              </div>
-            </div>
-            <div className="inputTag">
-              <label>Password</label>
-              <div>
-                <input
-                  type="password"
-                  placeholder="Your Password"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                />
-                <RiLock2Fill />
-              </div>
-            </div>
-            <button type="submit" onClick={handleRegister}>
-              Register
-            </button>
-            <Link to={"/login"}>Login Now</Link>
-          </form>
-        </div>
-        <div className="banner">
-          <img src="/register.png" alt="login" />
-        </div>
+                    />
+                    <span className="input-group-text"><FaPhoneFlip /></span>
+                  </div>
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="formPassword">
+                  <Form.Label>Password</Form.Label>
+                  <div className="input-group">
+                    <Form.Control
+                      type="password"
+                      placeholder="Your Password"
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
+                      required
+                    />
+                    <span className="input-group-text"><RiLock2Fill /></span>
+                  </div>
+                </Form.Group>
+
+                <button  type="submit" className="w-100 new-btn" id="loginBtn">
+                  Register
+                </button>
+              </Form>
+               {/* <Link to={"/login"} className ="new-btn2 w-100">Login</Link> */}
+            </Col>
+            <Col md={6} className="d-none d-md-block">
+              <img src="/login.png" alt="login" className="img-fluid" />
+            </Col>
+          </Row>
+        </Container>
       </section>
     </>
   );
